@@ -5,6 +5,8 @@ const root = process.cwd()
 const outdir = path.join(root, 'site')
 const entrypoints = [
   'pages/index.html',
+  'pages/accuracy.html',
+  'pages/benchmark.html',
 ]
 
 const result = Bun.spawnSync(
@@ -22,6 +24,8 @@ if (result.exitCode !== 0) {
 
 const targets = [
   { source: 'index.html', target: 'index.html' },
+  { source: 'accuracy.html', target: 'accuracy.html' },
+  { source: 'benchmark.html', target: 'benchmark.html' },
 ]
 
 for (let index = 0; index < targets.length; index++) {

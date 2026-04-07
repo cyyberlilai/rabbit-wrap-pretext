@@ -1,0 +1,5 @@
+{
+  "buildCommand": "bun run site:build",
+  "outputDirectory": "site",
+  "framework": null
+}
