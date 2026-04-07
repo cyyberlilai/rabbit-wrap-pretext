@@ -1,4 +1,4 @@
-# Rabbit Wrap: Real-Time Text Reflow Demo
+# Rabbit Wrap: Real-Time Text Reflow
 
 This project is a high-performance web typography demonstration built on top of [Pretext](https://github.com/chenglou/pretext), an experimental library for DOM-free text measurement and layout.
 
