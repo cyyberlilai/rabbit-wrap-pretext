@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rabbit Wrap</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --page: #f6f0e6;
+        --ink: #11100d;
+        --accent: #d97757;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: var(--page);
+        color: var(--ink);
+        overflow: hidden;
+      }
+      body {
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      }
+      .stage {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 90vh; /* Scaled to look good */
+        width: auto;
+        pointer-events: none;
+        z-index: 10;
+        mix-blend-mode: normal;
+      }
+      .line {
+        position: absolute;
+        white-space: pre;
+        color: var(--ink);
+        font-weight: 450;
+        letter-spacing: 0.002em;
+        user-select: text;
+        cursor: text;
+        transition: color 120ms ease;
+        z-index: 1;
+      }
+      .line:hover {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stage" class="stage">
+      <video id="rabbit" src="./assets/rabbit-transparent.webm" autoplay loop muted playsinline></video>
+    </div>
+    <script type="module" src="./demos/rabbit-wrap.ts"></script>
+  </body>
+</html>
